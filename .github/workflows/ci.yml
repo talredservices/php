@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          extensions: mbstring, xml, json
+
+      - name: Validate JSON
+        run: |
+          find . -name '*.json' -exec jq empty {} \;
+
+      - name: Validate Composer
+        run: composer validate
+
+      - name: Run PHPStan
+        run: composer run-script phpstan
+
+      - name: Run PHPUnit
+        run: composer test
+
+      - name: Check for outdated dependencies
+        run: composer outdated --direct --strict

@@ -1,0 +1,30 @@
+{
+  "name": "zolta/framework",
+  "description": "A Composer meta-package for the Zolta framework, providing an umbrella installer for Zolta packages.",
+  "type": "metapackage",
+  "require": {
+    "zolta/forge": "^1.0",
+    "zolta/cqrs": "^2.0",
+    "zolta/http": "^2.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Zolta\\Framework\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zoltasoft/zolta-framework",
+  "authors": [
+    {
+      "name": "Redouane Taleb",
+      "homepage": "https://github.com/redouaneT",
+      "role": "Founder & Lead Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/zolta/framework/issues",
+    "source": "https://github.com/zolta/framework"
+  }
+}
