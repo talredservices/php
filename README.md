@@ -1,10 +1,10 @@
 # Zolta Framework
 
-`zolta/framework` is a Composer meta-package that serves as an umbrella installer for the Zolta framework. This package does not contain any runtime source code but instead manages the installation of various Zolta components.
+`zolta/framework` is the umbrella package for the Zolta ecosystem. It installs the core Zolta components and ships a unified Laravel configuration entrypoint.
 
 ## Installed Packages
 
-This meta-package includes the following Zolta packages:
+This package includes the following Zolta components:
 
 - `zolta/forge`
 - `zolta/http`
@@ -26,12 +26,26 @@ composer require zolta/http
 composer require zolta/cqrs
 ```
 
+## Configuration Publishing
+
+For Laravel applications, publish the unified Zolta configuration with:
+
+```bash
+php artisan vendor:publish --tag=zolta-config
+```
+
+Tag meanings:
+
+- `zolta-config`: publishes the unified framework configuration (`config/zolta.php`).
+
+When you install `zolta/framework`, use `zolta-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. Package-specific tags are intended for applications that install an individual component directly.
+
 ## Version Compatibility
 
 The versions of the Zolta framework are designed to be compatible with specific versions of the individual components. Please refer to the `composer.json` file for detailed version constraints and compatibility information.
 
 ## Maintenance and Releases
 
-The `CHANGELOG.md` file documents all notable changes to this project. It follows the conventions of Keep a Changelog and will be updated with each release to reflect changes in the meta-package.
+The `CHANGELOG.md` file documents all notable changes to this project. It follows the conventions of Keep a Changelog and is updated with each release.
 
 For any issues or contributions, please refer to the project's GitHub repository.
