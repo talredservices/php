@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Zolta\Http\Authorization\Identity;
+
 return [
 
     /*
@@ -175,7 +177,7 @@ return [
     */
 
     'identity' => [
-        'class' => env('ZOLTA_IDENTITY_CLASS'),
+        'class' => env('ZOLTA_IDENTITY_CLASS', Identity::class),
 
         'permissions' => [
             // 'roles.*.permissions',

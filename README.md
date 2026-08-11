@@ -37,7 +37,8 @@ php artisan vendor:publish --tag=zolta-config
 Tag meanings:
 
 - `zolta-config`: publishes the unified framework configuration (`config/zolta.php`).
-- `zolta-cqrs-config`: publishes the CQRS package configuration only.
+
+When you install `zolta/framework`, use `zolta-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. Package-specific tags are intended for applications that install an individual component directly.
 
 ## Version Compatibility
 

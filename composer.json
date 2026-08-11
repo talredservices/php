@@ -3,38 +3,24 @@
 	"description": "A Composer package for the Zolta framework, providing an umbrella installer and unified Laravel configuration.",
 	"type": "library",
 	"require": {
-		"zolta/forge": "dev-main",
-		"zolta/cqrs": "dev-main",
-		"zolta/http": "dev-main"
+		"zolta/forge": "^1.0",
+		"zolta/cqrs": "^2.1",
+		"zolta/http": "^2.1"
 	},
-	"repositories": [
-		{
-			"type": "path",
-			"url": "packages/cqrs",
-			"options": {
-				"symlink": true
-			}
-		},
-		{
-			"type": "path",
-			"url": "packages/http",
-			"options": {
-				"symlink": true
-			}
-		},
-		{
-			"type": "path",
-			"url": "packages/forge",
-			"options": {
-				"symlink": true
-			}
-		}
-	],
+	"require-dev": {
+		"orchestra/testbench": "^10.6",
+		"phpunit/phpunit": "^11.5"
+	},
 	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Zolta\\Framework\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Zolta\\Framework\\Tests\\": "tests/"
 		}
 	},
 	"extra": {
@@ -58,6 +44,7 @@
 		"source": "https://github.com/zolta/framework"
 	},
 	"scripts": {
+		"test": "phpunit -c phpunit.xml",
 		"zolta:publish": [
 			"@php artisan vendor:publish --tag=zolta-config"
 		]

@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.0] - 2026-08-11
+
+### Added
+- Added a Laravel service provider and the publishable unified `zolta-config` configuration file
+- Added unified CQRS, HTTP, security, identity, and Identity-consumer configuration defaults
+- Added integration coverage confirming that the unified configuration is exposed through the component providers
+
+### Changed
+- The framework package is now a Composer library so it can provide Laravel configuration at runtime
+- Updated component requirements to `zolta/forge ^1.0`, `zolta/cqrs ^2.1`, and `zolta/http ^2.1`
+
+---
+
 ## [1.0.0] - 2026-08-02
 
 ### Added
@@ -30,5 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version comparison links
 
-[Unreleased]: https://github.com/zoltasoft/framework/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/zoltasoft/framework/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/zoltasoft/framework/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/zoltasoft/framework/compare/v0.0.0...v1.0.0
