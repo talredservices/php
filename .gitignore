@@ -18,3 +18,9 @@ Thumbs.db
 # Environment files
 .env
 .env.*
+
+
+# Packages
+/packages/cqrs/
+/packages/http/
+/packages/forge
