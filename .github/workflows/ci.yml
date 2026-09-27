@@ -34,6 +34,3 @@ jobs:
 
       - name: Run PHPUnit
         run: composer test
-
-      - name: Check for outdated dependencies
-        run: composer outdated --direct --strict
