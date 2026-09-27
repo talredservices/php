@@ -30,7 +30,7 @@ jobs:
         run: composer validate
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist --no-progress --no-audit
+        run: composer install --no-interaction --prefer-dist --no-progress
 
       - name: Run static analysis
         run: composer run-script analyse
