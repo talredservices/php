@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0'
+          php-version: '8.3'
           extensions: mbstring, xml, json
 
       - name: Validate JSON
@@ -29,8 +29,11 @@ jobs:
       - name: Validate Composer
         run: composer validate
 
-      - name: Run PHPStan
-        run: composer run-script phpstan
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress --no-audit
+
+      - name: Run static analysis
+        run: composer run-script analyse
 
       - name: Run PHPUnit
         run: composer test
