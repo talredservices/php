@@ -3,9 +3,9 @@
 	"description": "A Composer package for the Talred PHP framework, providing an umbrella installer and unified Laravel configuration.",
 	"type": "library",
 	"require": {
-		"talred/forge": "1.0.2-beta.1",
-		"talred/cqrs": "2.1.0-beta.1",
-		"talred/http": "2.1.1-beta.1"
+        "talred/forge": "^1.0",
+        "talred/cqrs": "^2.1",
+        "talred/http": "^2.1"
 	},
 	"require-dev": {
 		"orchestra/testbench": "^10.6",
