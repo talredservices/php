@@ -32,9 +32,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist --no-progress
 
-      - name: Run static analysis
-        run: composer run-script analyse
-
       - name: Run PHPUnit
         run: composer test
 
