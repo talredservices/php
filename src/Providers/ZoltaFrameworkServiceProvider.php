@@ -10,7 +10,7 @@ final class ZoltaFrameworkServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $configPath = dirname(__DIR__) . '/config/zolta.php';
+        $configPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'zolta.php';
 
         $defaults = require $configPath;
         $configured = (array) config('zolta', []);
@@ -24,7 +24,7 @@ final class ZoltaFrameworkServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            dirname(__DIR__) . '/config/zolta.php' => config_path('zolta.php'),
+            dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'zolta.php' => config_path('zolta.php'),
         ], 'zolta-config');
     }
 }

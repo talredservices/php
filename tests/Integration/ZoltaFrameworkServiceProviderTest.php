@@ -57,7 +57,7 @@ final class ZoltaFrameworkServiceProviderTest extends TestCase
         );
 
         $this->assertSame([
-            dirname(__DIR__, 2) . '/src/config/zolta.php' => config_path('zolta.php'),
+            dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'zolta.php' => config_path('zolta.php'),
         ], $published);
     }
 }

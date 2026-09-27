@@ -1,29 +1,29 @@
-# Zolta Framework
+# Talred PHP
 
-`zolta/framework` is the umbrella package for the Zolta ecosystem. It installs the core Zolta components and ships a unified Laravel configuration entrypoint.
+`talred/php` is the umbrella package for the Talred PHP ecosystem. It installs the core Talred components and ships a unified Laravel configuration entrypoint.
 
 ## Installed Packages
 
-This package includes the following Zolta components:
+This package includes the following Talred components:
 
-- `zolta/forge`
-- `zolta/http`
-- `zolta/cqrs`
+- `talred/forge`
+- `talred/http`
+- `talred/cqrs`
 
 ## Installation
 
-To install the complete Zolta framework, you can use Composer:
+To install the complete Talred PHP framework, you can use Composer:
 
 ```bash
-composer require zolta/framework
+composer require talred/php
 ```
 
 If you wish to install individual components, you can do so by requiring them directly:
 
 ```bash
-composer require zolta/forge
-composer require zolta/http
-composer require zolta/cqrs
+composer require talred/forge
+composer require talred/http
+composer require talred/cqrs
 ```
 
 ## Configuration Publishing
@@ -38,11 +38,11 @@ Tag meanings:
 
 - `zolta-config`: publishes the unified framework configuration (`config/zolta.php`).
 
-When you install `zolta/framework`, use `zolta-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. Package-specific tags are intended for applications that install an individual component directly.
+When you install `talred/php`, use `zolta-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. The `zolta-*` runtime names remain internal compatibility identifiers. Package-specific tags are intended for applications that install an individual component directly.
 
 ## Version Compatibility
 
-The versions of the Zolta framework are designed to be compatible with specific versions of the individual components. Please refer to the `composer.json` file for detailed version constraints and compatibility information.
+The versions of Talred PHP are designed to be compatible with specific versions of the individual components. Please refer to the `composer.json` file for detailed version constraints and compatibility information.
 
 ## Maintenance and Releases
 

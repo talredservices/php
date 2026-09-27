@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Prepared the Composer package migration from `zolta/framework` to `talred/php`.
+- Updated component requirements to `talred/forge`, `talred/cqrs`, and `talred/http` beta coordinates while retaining internal `Zolta\\Framework\\...` namespaces.
+
 ---
 
 ## [1.1.0] - 2026-08-11

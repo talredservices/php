@@ -1,11 +1,11 @@
 {
-	"name": "zolta/framework",
-	"description": "A Composer package for the Zolta framework, providing an umbrella installer and unified Laravel configuration.",
+	"name": "talred/php",
+	"description": "A Composer package for the Talred PHP framework, providing an umbrella installer and unified Laravel configuration.",
 	"type": "library",
 	"require": {
-		"zolta/forge": "^1.0",
-		"zolta/cqrs": "^2.1",
-		"zolta/http": "^2.1"
+		"talred/forge": "1.0.2-beta.1",
+		"talred/cqrs": "2.1.0-beta.1",
+		"talred/http": "2.1.1-beta.1"
 	},
 	"require-dev": {
 		"orchestra/testbench": "^10.6",
@@ -31,7 +31,7 @@
 		}
 	},
 	"license": "MIT",
-	"homepage": "https://github.com/zoltasoft/zolta-framework",
+	"homepage": "https://github.com/talredservices/php",
 	"authors": [
 		{
 			"name": "Redouane Taleb",
@@ -40,8 +40,8 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/zolta/framework/issues",
-		"source": "https://github.com/zolta/framework"
+		"issues": "https://github.com/talredservices/php/issues",
+		"source": "https://github.com/talredservices/php"
 	},
 	"scripts": {
 		"test": "phpunit -c phpunit.xml",
