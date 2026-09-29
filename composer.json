@@ -1,11 +1,14 @@
 {
 	"name": "talred/php",
-	"description": "A Composer package for the Talred PHP framework, providing an umbrella installer and unified Laravel configuration.",
+	"description": "A Composer package for Talred PHP, providing an umbrella installer and unified Laravel configuration.",
 	"type": "library",
 	"require": {
-        "talred/forge": "^1.0",
-        "talred/cqrs": "^2.1",
-        "talred/http": "^2.1"
+		"talred/forge": "^1.0",
+		"talred/cqrs": "^2.1",
+		"talred/http": "^2.1"
+	},
+	"replace": {
+		"zolta/framework": "self.version"
 	},
 	"require-dev": {
 		"orchestra/testbench": "^10.6",
