@@ -48,6 +48,9 @@
 	},
 	"scripts": {
 		"test": "phpunit -c phpunit.xml",
+		"talred:publish": [
+			"@php artisan vendor:publish --tag=talred-config"
+		],
 		"zolta:publish": [
 			"@php artisan vendor:publish --tag=zolta-config"
 		]

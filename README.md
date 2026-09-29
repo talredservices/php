@@ -31,24 +31,26 @@ composer require talred/cqrs
 For Laravel applications, publish the unified Talred configuration with:
 
 ```bash
-php artisan vendor:publish --tag=zolta-config
+php artisan vendor:publish --tag=talred-config
 ```
 
 Tag meanings:
 
-- `zolta-config`: publishes the unified framework configuration (`config/zolta.php`).
+- `talred-config`: publishes the unified framework configuration as `config/talred.php`.
+- `zolta-config`: publishes the same unified configuration as `config/zolta.php` for compatibility.
 
-When you install `talred/php`, use `zolta-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. The publish tag and `config/zolta.php` filename remain technical compatibility identifiers. Package-specific tags are intended for applications that install an individual component directly.
+When you install `talred/php`, use `talred-config`; it includes configuration for CQRS, HTTP, security, Identity, and the Identity consumer. The runtime mirrors both `config('talred.*')` and `config('zolta.*')`, with Talred values taking precedence when both are configured. Package-specific tags are intended for applications that install an individual component directly.
+
+The component packages also retain their existing Zolta publish tags and provide Talred-named aliases. For example, `talred-cqrs-config`, `talred-http-config`, `talred-security-config`, and `talred-identity-consumer-config` are additive; no existing tag, file, or key is removed.
 
 ## Compatibility
 
 The umbrella package keeps its technical `Zolta\Framework` composition-root
 and provider names unchanged. This avoids colliding with Forge’s public
 `Talred\Framework` adapter namespace. Compatibility-enabled Forge, CQRS, and
-HTTP releases are intended to expose their additive Talred namespaces while
-existing Zolta imports continue to work. The checked-out package sources have
-been validated locally; those compatibility-enabled releases must be published
-before an installed umbrella graph can resolve `Talred\...` imports.
+HTTP releases expose additive Talred namespaces while existing Zolta imports
+continue to work. Configuration follows the same pattern: new applications use
+`talred.*`, while resolved values remain available through `zolta.*`.
 
 ## Version Compatibility
 
